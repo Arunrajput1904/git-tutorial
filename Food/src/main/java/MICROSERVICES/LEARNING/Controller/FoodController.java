@@ -17,8 +17,7 @@ public class FoodController {
     @Autowired
     FoodService foodService;
 
-    @Autowired
-    RestaurantService restaurantService;
+
 
     @GetMapping
     public List<FoodItemDto> findAll(){
@@ -36,7 +35,7 @@ public class FoodController {
 
     @PostMapping
     public FoodItemDto save(@RequestBody FoodItemDto foodItemDto){
-        System.out.println("Save food");
+
         return foodService.saveitem(foodItemDto);
     }
 }

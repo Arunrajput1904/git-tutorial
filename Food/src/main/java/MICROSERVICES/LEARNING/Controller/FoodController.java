@@ -21,6 +21,7 @@ public class FoodController {
     public List<FoodItemDto> findAll(){
         List<FoodItemDto> list=foodService.findall();
         System.out.println("Find food all");
+        System.out.println(list);
         return list;
     }
 

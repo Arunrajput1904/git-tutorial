@@ -16,16 +16,6 @@
         <module name="Config" />
         <module name="GatewayService" />
       </profile>
-      <profile name="Annotation profile for RestaurantService" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
-        </processorPath>
-        <module name="demo" />
-        <module name="Restaurant" />
-      </profile>
       <profile name="Annotation profile for ServiceRegistry" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -35,6 +25,16 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
         </processorPath>
         <module name="DiscoveryService" />
+      </profile>
+      <profile name="Annotation profile for RestaurantService" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+        </processorPath>
+        <module name="Restaurant" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

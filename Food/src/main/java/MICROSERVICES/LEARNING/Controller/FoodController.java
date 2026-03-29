@@ -33,6 +33,7 @@ public class FoodController {
 
     @PostMapping
     public FoodItemDto save(@RequestBody FoodItemDto foodItemDto){
+        System.out.println("Save food");
         return foodService.saveitem(foodItemDto);
     }
 }

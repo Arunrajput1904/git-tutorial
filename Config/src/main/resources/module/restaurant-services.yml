@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Restaurant-services
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/hiberjpa
+    username: postgres
+    password: Arun@2003
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/

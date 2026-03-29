@@ -1,0 +1,29 @@
+spring:
+ application:
+  name: food-services
+
+
+ datasource:
+  driver-class-name: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5433/hiberjpa
+  username: postgres
+  password: Arun@2003
+
+ jpa:
+  hibernate:
+   ddl-auto: create
+  properties:
+   hibernate:
+    default_schema: foodschema
+
+
+server:
+ port: 8084
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:5000/eureka/
+
+
+

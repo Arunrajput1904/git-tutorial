@@ -1,0 +1,33 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        default_schema: restaurantschema
+
+
+server:
+  port: 8094
+
+
+management:
+    endpoint:
+      gateway:
+        access: read_only
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+
+    info:
+      env:
+        enabled: true
+
+
+info:
+  app:
+    name: "restuarant services"
+    description: " ohhh......."
+    version: "1.0V"

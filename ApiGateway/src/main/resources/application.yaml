@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: ApiGateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: false
+          routes:
+            - id: restaurant-service
+              uri: lb://restaurant-services
+              predicates:
+                - Path=/restaurant/**
+              filters:
+                - RewritePath=/restaurant/?(?<remaining>.*) , /$\{remaining}
+
+
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+
+
+server:
+  port: 8099
+
+
+management:
+  endpoint:
+    gateway:
+      access: read_only
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+  info:
+    env:
+      enabled: true
+
+
+info:
+  app:
+    name: "Gateway service"
+    description: " ohhh......."
+    version: "1.0V"
+
+

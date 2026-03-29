@@ -1,0 +1,11 @@
+spring:
+ jpa:
+  hibernate:
+   ddl-auto: create
+  properties:
+   hibernate:
+    default_schema: foodschema
+
+
+server:
+ port: 8084

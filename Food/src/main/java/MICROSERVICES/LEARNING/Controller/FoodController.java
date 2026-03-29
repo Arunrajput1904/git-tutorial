@@ -20,6 +20,7 @@ public class FoodController {
     @GetMapping
     public List<FoodItemDto> findAll(){
         List<FoodItemDto> list=foodService.findall();
+        System.out.println("Find food all");
         return list;
     }
 

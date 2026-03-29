@@ -25,6 +25,7 @@ public class FoodController {
 
     @GetMapping("/{id}")
     public FoodItemDto findById(@PathVariable Long id){
+        System.out.println("Find food by id"+ id);
         return foodService.findbyid(id);
     }
 

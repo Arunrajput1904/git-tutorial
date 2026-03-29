@@ -3,6 +3,7 @@ package MICROSERVICES.LEARNING.Controller;
 
 import MICROSERVICES.LEARNING.Dto.FoodItemDto;
 import MICROSERVICES.LEARNING.Entity.FoodItem;
+import MICROSERVICES.LEARNING.Service.ConfigService.RestaurantService;
 import MICROSERVICES.LEARNING.Service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,8 @@ public class FoodController {
     @Autowired
     FoodService foodService;
 
+    @Autowired
+    RestaurantService restaurantService;
 
     @GetMapping
     public List<FoodItemDto> findAll(){
